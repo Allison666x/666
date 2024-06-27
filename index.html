@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Me extrañaste?</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #e0f7fa;
+            font-family: 'Press Start 2P', cursive;
+            color: #fff;
+        }
+        .container {
+            text-align: center;
+            background: #81d4fa;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(33, 150, 243, 0.2);
+            width: 80%;
+            max-width: 400px;
+        }
+        h1 {
+            font-size: 1.2rem;
+            color: #0288d1;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #0288d1;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-family: 'Press Start 2P', cursive;
+            margin: 5px;
+            width: 100%;
+            max-width: 150px;
+        }
+        button:hover {
+            background-color: #0277bd;
+        }
+        .hidden {
+            display: none;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 1rem;
+            color: #0277bd;
+        }
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+            button {
+                max-width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¿Me extrañaste?</h1>
+        <button onclick="showYesMessage()">Sí</button>
+        <button onclick="showMaybeMessage()">Quizá</button>
+        <div id="yesMessage" class="message hidden">¡Yo también te extrañé mucho! 💙</div>
+        <div id="maybeMessage" class="message hidden">Di que sí... </div>
+    </div>
+
+    <script>
+        function showYesMessage() {
+            document.getElementById('yesMessage').classList.remove('hidden');
+            document.getElementById('maybeMessage').classList.add('hidden');
+        }
+
+        function showMaybeMessage() {
+            document.getElementById('maybeMessage').classList.remove('hidden');
+            document.getElementById('yesMessage').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
+
